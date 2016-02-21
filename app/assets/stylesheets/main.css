@@ -1,3 +1,5 @@
+/*Enter Page*/
+
 #enter {
   background-color: #d9d9d9;
 }
@@ -12,6 +14,8 @@
   position: relative;
   bottom: 300px;
 }
+
+/*Sign-Up Page*/
 
 #signup {
   margin: 0 15px 0 15px;
@@ -34,4 +38,22 @@ form {
   bottom: 900px;
   background-color: white;
   opacity: 0.8;
+}
+
+/*Log-in Page*/
+
+
+#login-box {
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+}
+
+#welcomeyugen, #email, #password {
+  color: white;
+}
+
+#welcomebox {
+  position: relative;
+  bottom: 650px;
 }
