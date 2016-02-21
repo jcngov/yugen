@@ -12,3 +12,11 @@
   position: relative;
   bottom: 300px;
 }
+
+#signup {
+  margin: 0 15px 0 15px;
+}
+
+#login {
+  margin: 0 15px 0 15px;
+}

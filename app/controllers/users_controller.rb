@@ -12,7 +12,7 @@ def create
   @user = User.new
   flash[:notice] = "You Successfully Signed Up"
   if @user.save
-    redirect_to users_path
+    redirect_to home_path
   else
     render :new
   end
