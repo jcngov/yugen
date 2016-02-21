@@ -21,7 +21,7 @@
   <br>
   <%= f.label :password_confirmation %>
   <%= f.text_field :password_confirmation %>
-<a class="btn btn-primary" href="/home">Submit</a>
+<%= f.submit "Submit" %>
 <ul>
   <% @user.errors.full_messages.each do |message| %>
     <li><%= message %></li>
