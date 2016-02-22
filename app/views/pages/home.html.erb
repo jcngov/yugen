@@ -1,39 +1,34 @@
-<body>
-  <div class="container-fluid" id="welcomeandlogout">
-    <div class="row">
-      <div class="col-md-8" id="welcomename">
-        <% if current_user %>
-          Welcome, <%= current_user.first_name %>
-      </div>
-      <div class="col-md-offset-11">
-          <%= link_to 'Log Out', session_path('backtostart'), method: :delete %>
-      </div>
+<div class="container-fluid" id="welcomeandlogout">
+  <div class="row">
+    <div class="col-md-8" id="welcomename">
+      <% if current_user %>
+        Welcome, <%= current_user.first_name %>
+    </div>
+    <div class="col-md-offset-11">
+        <%= link_to 'Log Out', session_path('backtostart'), method: :delete %>
     </div>
   </div>
+</div>
     <% end %>
-  <div class="container">
-    <div class="row">
-      <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
-        <div class="container" id="navbar">
-          <ul class="nav navbar-nav">
-            <li id="navbuttons"><a href="">Home</a></li>
-            <li id="navbuttons"><a href="">My Profile</a></li>
-            <li id="navbuttons"><a href="">Travelers</a></li>
-            <li class="dropdown" id="navbuttons">
-              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button">Locations<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="">First</a></li>
-                  <li><a href="">Second</a></li>
-                </ul>
-            </li>
-            <li id="navbuttons"><a href="">About Us</a></li>
+<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
+  <div class="container" id="navbar">
+    <ul class="nav navbar-nav">
+      <li id="navbuttons"><a href="">Home</a></li>
+      <li id="navbuttons"><a href="">My Profile</a></li>
+      <li id="navbuttons"><a href="">Travelers</a></li>
+      <li class="dropdown" id="navbuttons">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown">Locations<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="">First</a></li>
+            <li><a href="">Second</a></li>
           </ul>
-        </div>
-      </nav>
-    </div>
+      </li>
+      <li id="navbuttons"><a href="">About Us</a></li>
+    </ul>
   </div>
-  <div id="createandexplorecontainer">
-    <div id="create" class="text-center"><a href="" id="createlink">c r e a t e</a></div>
-    <div id="explore" class="text-center"><a href="" id="explorelink">e x p l o r e</a></div>
-  </div>
-</body>
+</nav>
+<div id="createandexplorecontainer">
+  <div id="create" class="text-center"><a href="" id="createlink">c r e a t e</a></div>
+  <div id="explore" class="text-center"><a href="" id="explorelink">e x p l o r e</a></div>
+</div>
+

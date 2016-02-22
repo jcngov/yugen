@@ -8,7 +8,11 @@ Rails.application.routes.draw do
 
   get '/home' => "pages#home"
 
-  resources :users, only: [:index, :new, :create]
+# nested route: to make sure creating routes that have all nescessary data structured
+
+  resources :users, only: [:index, :new, :create] do
+    resources :posts
+  end
 
   resources :sessions, only: [:new, :create, :destroy]
 
