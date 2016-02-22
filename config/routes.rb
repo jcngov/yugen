@@ -10,10 +10,11 @@ Rails.application.routes.draw do
 
 # nested route: to make sure creating routes that have all nescessary data structured
 
+  resources :posts, only: [:index]
+
   resources :users, only: [:index, :new, :create] do
     resources :posts
   end
-  resources :posts, only: [:index]
   resources :sessions, only: [:new, :create, :destroy]
 
   get '/login' => 'sessions#new'
