@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
 # nested route: to make sure creating routes that have all nescessary data structured
 
-  resources :posts, only: [:index, :show, :edit]
+  resources :posts, only: [:index, :show, :edit, :destroy]
 
   resources :users, only: [:new, :create] do
     resources :posts

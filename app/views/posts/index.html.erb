@@ -1,9 +1,15 @@
 <h1>Posts</h1>
 <ul>
 <% @posts.each do |post| %>
-  <li><%= post.title %></li>
-  <li><%= post.user.first_name %> </li>
+  <li>Title: <%= post.title %></li>
+  <li>Destination: <%= post.location %> </li>
+  <li>Date Traveled: <%= post.traveled_on %> </li>
+  <li>Description: <%= post.description %> </li>
+  <li>Pros: <%= post.pros %> </li>
+  <li>Cons: <%= post.cons %> </li>
 </ul>
 <%= link_to "Show", post %>
 <%= link_to "Edit", edit_post_path(post) %>
+<%= link_to "Delete", post, method: :delete, data: {confirm: "Are you sure?"} %>
+<%= link_to "Home", home_path %>
 <% end %>
