@@ -1,0 +1,26 @@
+<h1> Edit Post </h1>
+
+<%= form_for [@user, @post] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+  <br>
+  <%= f.label :traveled_on %>
+  <%= f.text_field :traveled_on %>
+  <br>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <br>
+  <%= f.label :pros %>
+  <%= f.text_field :pros %>
+  <br>
+  <%= f.label :cons %>
+  <%= f.text_field :cons %>
+  <br>
+  <%= f.label :tips_and_tricks %>
+  <%= f.text_field :tips_and_tricks %>
+  <br>
+<%= f.submit "Submit" %>
+<% end %>

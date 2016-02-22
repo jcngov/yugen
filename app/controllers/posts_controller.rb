@@ -1,9 +1,7 @@
 class PostsController < ApplicationController
   def index
-    if params[:current_user_id]
+    if params[:user_id]
       @posts = current_user.posts
-    else
-      @posts = Post.all
     end
   end
 
@@ -19,6 +17,26 @@ class PostsController < ApplicationController
       redirect_to user_posts_path(current_user)
     else
       render :new
+    end
+  end
+
+  def show
+    @user = current_user
+    @post = Post.find(params[:id])
+  end
+
+  def edit
+    @user = current_user
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @user = current_user
+    @post = Post.find(params[:id])
+    if @post.update_attributes(post_params)
+      redirect_to user_posts_path(current_user)
+    else
+      render :edit
     end
   end
 

@@ -4,4 +4,6 @@
   <li><%= post.title %></li>
   <li><%= post.user.first_name %> </li>
 </ul>
+<%= link_to "Show", post %>
+<%= link_to "Edit", edit_post_path(post) %>
 <% end %>
