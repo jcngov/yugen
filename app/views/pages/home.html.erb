@@ -1,13 +1,43 @@
-<h1> Home Page </h1>
+<body>
+  <div class="container-fluid" id="welcomeandlogout">
+    <div class="row">
+      <div class="col-md-8" id="welcomename">
+        <% if current_user %>
+          Welcome, <%= current_user.first_name %>
+      </div>
+      <div class="col-md-offset-11">
+          <%= link_to 'Log Out', session_path('backtostart'), method: :delete %>
+        <% else %>
+          <%= link_to 'Log In', login_path %>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <%= link_to 'Sign Up', new_user_path %>
+      </div>
+    </div>
+  </div>
+    <% end %>
+  <div class="container">
+    <div class="row">
+      <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
+        <div class="container" id="navbar">
+          <ul class="nav navbar-nav">
+            <li id="navbuttons"><a href="">Home</a></li>
+            <li id="navbuttons"><a href="">My Profile</a></li>
+            <li id="navbuttons"><a href="">Travelers</a></li>
+            <li class="dropdown" id="navbuttons">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button">Locations<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="">First</a></li>
+                  <li><a href="">Second</a></li>
+                </ul>
+            </li>
+            <li id="navbuttons"><a href="">About Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
 
-<p>
-  <% if current_user %>
-    Welcome, <%= current_user.first_name %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to 'Log Out', session_path('backtostart'), method: :delete %>
-  <% else %>
-    <%= link_to 'Log In', login_path %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to 'Sign Up', new_user_path %>
-  <% end %>
-</p>
+    <div id="create">create</div>
+    <div id="explore">explore</div>
+
+</body>

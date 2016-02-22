@@ -16,7 +16,7 @@ end
 
 def destroy
   session[:current_user_id] = nil
-  redirect_to enter_path
+  redirect_to root_path, notice: "Logged Out"
 end
 
 end

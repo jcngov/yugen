@@ -33,7 +33,7 @@ form {
   width: 400px;
 }
 
-.container {
+#signupcontainer {
   position: relative;
   bottom: 900px;
   background-color: white;
@@ -53,7 +53,47 @@ form {
   color: white;
 }
 
+#emailtext, #passwordtext {
+  color:black;
+}
+
 #welcomebox {
   position: relative;
   bottom: 650px;
 }
+
+/*Home Page*/
+
+#welcomeandlogout {
+  position: relative;
+  top: 5px;
+}
+
+#welcomename {
+  padding-left: 43px;
+}
+
+#navbar{
+  top: 30px;
+  padding-left: 15px;
+  margin-left: 0;
+}
+
+#navbuttons {
+  padding-right: 40px;
+}
+
+#create, #explore {
+  position: relative;
+  top: 100px;
+}
+/*#createandexplorecontainer {
+  border: 2px solid;
+  width: 1434px;
+  height: 400px;
+  position: relative;
+  right: 1315px;
+  top: 35px;
+  display: flex;
+}
+*/
