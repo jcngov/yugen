@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :new, :create] do
     resources :posts
   end
-
+  resources :posts, only: [:index]
   resources :sessions, only: [:new, :create, :destroy]
 
   get '/login' => 'sessions#new'
