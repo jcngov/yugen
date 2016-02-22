@@ -83,17 +83,33 @@ form {
   padding-right: 40px;
 }
 
-#create, #explore {
-  position: relative;
-  top: 100px;
-}
-/*#createandexplorecontainer {
-  border: 2px solid;
+#createandexplorecontainer {
   width: 1434px;
-  height: 400px;
+  height: 500px;
   position: relative;
-  right: 1315px;
-  top: 35px;
+  top: 75px;
   display: flex;
+  justify-content: space-around;
 }
-*/
+
+#create, #explore {
+ width: 700px;
+}
+
+#createlink, #explorelink {
+  font-family: 'Raleway', sans-serif;
+  font-size: 100px;
+  color: white;
+  position: relative;
+  top: 170px;
+  opacity: 0.8;
+}
+#create {
+  background-image: url("https://i.imgur.com/kA0zLKX.jpg");
+}
+
+#explore {
+  background-image: url("https://i.imgur.com/JY4sz1V.jpg");
+}
+
+

@@ -7,10 +7,6 @@
       </div>
       <div class="col-md-offset-11">
           <%= link_to 'Log Out', session_path('backtostart'), method: :delete %>
-        <% else %>
-          <%= link_to 'Log In', login_path %>
-          &nbsp;&nbsp;|&nbsp;&nbsp;
-          <%= link_to 'Sign Up', new_user_path %>
       </div>
     </div>
   </div>
@@ -36,8 +32,8 @@
       </nav>
     </div>
   </div>
-
-    <div id="create">create</div>
-    <div id="explore">explore</div>
-
+  <div id="createandexplorecontainer">
+    <div id="create" class="text-center"><a href="" id="createlink">c r e a t e</a></div>
+    <div id="explore" class="text-center"><a href="" id="explorelink">e x p l o r e</a></div>
+  </div>
 </body>
