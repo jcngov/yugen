@@ -31,17 +31,16 @@ class PostsController < ApplicationController
     @user = current_user
     @post = Post.find(params[:id])
     if @post.update_attributes(post_params)
-      redirect_to user_posts_path(current_user)
+      redirect_to posts_path
     else
       render :edit
     end
   end
 
   def destroy
-    @user = current_user
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to user_posts_path(current_user)
+    redirect_to posts_path
   end
 
 private

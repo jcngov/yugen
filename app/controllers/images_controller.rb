@@ -1,4 +1,5 @@
 class ImagesController < ApplicationController
+
   def create
     @image = Image.new(image_params)
     @image.post_id = params[:post_id]

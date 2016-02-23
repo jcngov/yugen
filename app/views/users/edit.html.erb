@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="col-md-4 col-md-offset-4">
+    <%= form_for @user do |f| %>
+      <div class="form-group">
+        <%= f.label :first_name, "First Name" %>
+        <input class="form-control" placeholder="First Name"<%= f.text_field :first_name %>
+      </div>
+      <div class="form-group">
+        <%= f.label :last_name, "Last Name" %>
+        <input class="form-control" placeholder="Last Name"<%= f.text_field :last_name %>
+      </div>
+      <div class="form-group">
+        <%= f.label :sex, 'I am' %>
+        <select class="text" placeholder="Select Sex"<%= f.text_field :sex %>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <%= f.label :born_on, 'Birthday' %>
+        <input class="form-control" placeholder="Birthday"<%= f.text_field :born_on %>
+      </div>
+      <div class="form-group">
+        <%= f.label :email %>
+        <input class="form-control" placeholder="Email"<%= f.text_field :email %>
+      </div>
+      <div><%= f.submit "Update" %> </div>
+      <%= link_to "Home", home_path %>
+    <% end %>
+  </div>
+</div>
+

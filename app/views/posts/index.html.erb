@@ -4,11 +4,11 @@
   <li>Title: <%= post.title %></li>
   <li>Destination: <%= post.location %> </li>
   <li>Date Traveled: <%= post.traveled_on %> </li>
-  <li><%= image_tag(post.images) %></li>
 </ul>
-<%= link_to "Add Post", new_user_post_path(:user_id) %>
+
 <%= link_to "Show", post %>
 <%= link_to "Edit", edit_post_path(post) %>
 <%= link_to "Delete", post, method: :delete, data: {confirm: "Are you sure?"} %>
 <%= link_to "Home", home_path %>
 <% end %>
+
