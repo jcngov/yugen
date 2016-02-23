@@ -1,26 +1,68 @@
-<h1> New Post </h1>
 
-<%= form_for [@user, @post] do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <br>
-  <%= f.label :location %>
-  <%= f.text_field :location %>
-  <br>
-  <%= f.label :traveled_on %>
-  <%= f.text_field :traveled_on %>
-  <br>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <br>
-  <%= f.label :pros %>
-  <%= f.text_field :pros %>
-  <br>
-  <%= f.label :cons %>
-  <%= f.text_field :cons %>
-  <br>
-  <%= f.label :tips_and_tricks %>
-  <%= f.text_field :tips_and_tricks %>
-  <br>
-<%= f.submit "Submit" %>
+<div class="container-fluid" id="welcomeandlogout">
+  <div class="row">
+    <div class="col-md-8" id="welcomename">
+      <% if current_user %>
+        Welcome, <%= current_user.first_name %>
+    </div>
+    <div class="col-md-offset-11">
+        <%= link_to 'Log Out', session_path('backtostart'), method: :delete %>
+    </div>
+  </div>
+</div>
+    <% end %>
+<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
+  <div class="container" id="navbar">
+    <ul class="nav navbar-nav">
+      <li id="navbuttons"><a href="/home">Home</a></li>
+      <li id="navbuttons"><a href="/users/:user_id/posts">My Posts</a></li>
+      <li id="navbuttons"><a href="">Travelers</a></li>
+      <li class="dropdown" id="navbuttons">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown">Locations<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="">First</a></li>
+            <li><a href="">Second</a></li>
+          </ul>
+      </li>
+      <li id="navbuttons"><a href="">About Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<h1> Create New Post </h1>
+<div class="container" id="newpostcontainer">
+
+    <%= form_for [@post] do |f| %>
+      <div class="form-group">
+        <%= f.label :title %>
+        <input class="form-control" placeholder="Title"<%= f.text_field :title %>
+      </div>
+      <div class="form-group">
+        <%= f.label :location%>
+        <input class="form-control" placeholder="Location"<%= f.text_field :location %>
+      </div>
+      <div class="form-group">
+        <%= f.label :traveled_on %>
+        <input class="form-group" placeholder="Date"<%= f.text_field :traveled_on %>
+      </div>
+      <div class="form-group">
+        <%= f.label :description %>
+        <input class="form-control" <%= f.text_field :description %>
+      </div>
+      <div class="form-group">
+        <%= f.label :pros %>
+        <input class="form-control" <%= f.text_field :pros %>
+      </div>
+      <div class="form-group">
+        <%= f.label :cons %>
+        <input class="form-control" <%= f.text_field :cons %>
+      </div>
+      <div class="form-group">
+        <%= f.label :tips_and_tricks %>
+        <input class="form-control" <%= f.text_field :tips_and_tricks %>
+      </div>
+    <%= f.submit "Submit" %>
+</div>
 <% end %>
+
+

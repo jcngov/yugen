@@ -1,1 +1,29 @@
 <h1>Show Page</h1>
+<ul>
+
+  <li>Title: <%= @post.title %></li>
+  <li>Destination: <%= @post.location %> </li>
+  <li>Date Traveled: <%= @post.traveled_on %> </li>
+  <li>Description: <%= @post.description %> </li>
+  <li>Pros: <%= @post.pros %> </li>
+  <li>Cons: <%= @post.cons %> </li>
+</ul>
+<%= link_to "Add Post", new_post_path %>
+<%= link_to "Edit", edit_post_path(@post) %>
+<%= link_to "Delete", @post, method: :delete, data: {confirm: "Are you sure?"} %>
+<%= link_to "Home", home_path %>
+
+<%= form_for [@post, @image] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %>
+  <%= f.submit "Create Image" %>
+<% end %>
+
+
+<% @post.images.each do |img| %>
+  <h3><%= img.title %></h3>
+  <img src="<%= img.image_url %>">
+<% end %>
+

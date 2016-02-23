@@ -1,28 +1,25 @@
 class PostsController < ApplicationController
   def index
-    if params[:user_id]
-      @posts = current_user.posts
-    end
+    @posts = current_user.posts
   end
 
   def new
-    @user = current_user
     @post = Post.new
   end
 
   def create
-    @user = current_user
-    @post = @user.posts.new(post_params)
+    @post = Post.new(post_params)
+    @post.user = current_user
     if @post.save
-      redirect_to user_posts_path(current_user)
+      redirect_to @post
     else
       render :new
     end
   end
 
   def show
-    @user = current_user
     @post = Post.find(params[:id])
+    @image = Image.new
   end
 
   def edit
@@ -51,6 +48,5 @@ private
   def post_params
     params.require(:post).permit(:title, :location, :traveled_on, :description, :pros, :cons, :tips_and_tricks)
   end
-
 end
 
