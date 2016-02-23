@@ -1,3 +1,9 @@
 <% @users.each do |user| %>
-  <%= user.first_name %> <%= user.last_name %>
+  <%= link_to user.first_name, user_path(:id => user.id) %>
+  <img id="profilepic" src="<%= user.profile_picture_url %>">
+  <ul>
+    <li><%= user.first_name %> <%= user.last_name %></li>
+
+  </ul>
 <% end %>
+

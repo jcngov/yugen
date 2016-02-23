@@ -112,4 +112,9 @@ form {
   background-image: url("https://i.imgur.com/JY4sz1V.jpg");
 }
 
+/*My Post Page*/
 
+#profilepic {
+  width: 250px;
+  height: 250px;
+}

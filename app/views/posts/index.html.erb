@@ -1,4 +1,5 @@
-<h1>My Posts</h1>
+<h1 class="text-left">My Adventures</h1>
+<img id="profilepic" src="<%= current_user.profile_picture_url %>">
 <ul>
 <% @posts.each do |post| %>
   <li>Title: <%= post.title %></li>

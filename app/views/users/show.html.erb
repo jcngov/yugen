@@ -1,48 +1,6 @@
-<h1 class="text-center"> My Profile </h1>
 
-<!--   <%= form_for @user do |f| %>
-<ul>
-  <li>First Name: <%= @user.first_name %></li>
-  <li>Last Name: <%= @user.last_name %></li>
-  <li>Sex: <%= @user.sex %></li>
-  <li>Birthday: <%= @user.born_on %></li>
-  <li>Email: <%= @user.email %></li>
-  <li>Profile Picture: <%= @user.profile_picture_url %></li>
-    <%= f.label :profile_picture_url %>
-    <%= f.text_field :profile_picture_url %>
-</ul>
-  <% end %>
- -->
-
-<div class="container">
-  <div class="col-md-4 col-md-offset-4">
-    <%= form_for @user do |f| %>
-      <div class="form-group">
-        <%= f.label :first_name, "First Name" %>
-        <input class="form-control" placeholder="First Name"<%= f.text_field :first_name %>
-      </div>
-      <div class="form-group">
-        <%= f.label :last_name, "Last Name" %>
-        <input class="form-control" placeholder="Last Name"<%= f.text_field :last_name %>
-      </div>
-      <div class="form-group">
-        <%= f.label :sex, 'I am' %>
-        <select class="text" placeholder="Select Sex"<%= f.text_field :sex %>
-          <option>Male</option>
-          <option>Female</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <%= f.label :born_on, 'Birthday' %>
-        <input class="form-control" placeholder="Birthday"<%= f.text_field :born_on %>
-      </div>
-      <div class="form-group">
-        <%= f.label :email %>
-        <input class="form-control" placeholder="Email"<%= f.text_field :email %>
-      </div>
-      <%= link_to "Edit", edit_user_path %>
-      <%= link_to "Home", home_path %>
-    <% end %>
-  </div>
-</div>
-
+<h1><%= @user.first_name %></h1>
+<%= @user.last_name %>
+<% @user.posts.each do |post| %>
+  <%= post.title %>
+<% end %>
