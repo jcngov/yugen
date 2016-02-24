@@ -17,7 +17,10 @@ Rails.application.routes.draw do
 
   resources :posts do
     resources :images, shallow: true, except: [:index]
+    resources :locations, only: [:new, :create]
   end
+
+  resources :locations, only: [:index, :show]
 
   resources :sessions, only: [:index, :new, :create, :destroy]
 

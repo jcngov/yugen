@@ -20,6 +20,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @image = Image.new
+    @location = Location.new
   end
 
   def edit
@@ -45,7 +46,7 @@ class PostsController < ApplicationController
 
 private
   def post_params
-    params.require(:post).permit(:title, :traveled_on, :description, :pros, :cons, :tips_and_tricks)
+    params.require(:post).permit(:title, :continent, :country, :region, :city, :long, :lat, :traveled_on, :description, :pros, :cons, :tips_and_tricks)
   end
 end
 
