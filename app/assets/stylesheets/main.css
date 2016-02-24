@@ -69,9 +69,6 @@ form {
   top: 5px;
 }
 
-#welcomename {
-  padding-left: 43px;
-}
 
 #navbar{
   top: 30px;
@@ -112,9 +109,100 @@ form {
   background-image: url("https://i.imgur.com/JY4sz1V.jpg");
 }
 
-/*My Post Page*/
+.logout {
+  float: right;
+}
+/*My Adventures Page*/
+
+#eachpost {
+  border: 2px solid;
+  position: relative;
+  top: 100px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#space {
+  width: 400px;
+}
+
+#titleandlocationlist {
+  list-style: none;
+  padding-left: 0;
+}
+
+#linklist {
+  padding-left: 0;
+}
+
+.link {
+  display: inline;
+  list-style: none;
+}
+
+#myadventurescontainer {
+
+}
+/*Users Page*/
 
 #profilepic {
   width: 250px;
   height: 250px;
+}
+
+#linkprofilename {
+  width: 250px;
+  height: 250px;
+
+}
+
+#wholepage {
+  height: 600px;
+  width: 800px;
+  display: flex;
+  position: relative;
+  top: 100px;
+}
+
+#name {
+  font-size: 15px;
+}
+
+.explorelink {
+  font-size: 15px;
+  text-decoration: none;
+  margin-left: 50px;
+}
+
+#nameandlink {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+
+/*Show User's Page*/
+
+#showpagecontainer, #myadventurescontainer {
+  position: relative;
+  top: 80px;
+}
+
+#profilepiconshow {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/*New Post Page*/
+
+#description {
+  height: 80px;
+}
+
+#newpostcontainer {
+  position: relative;
+  top: 50px;
 }

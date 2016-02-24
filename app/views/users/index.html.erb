@@ -1,9 +1,14 @@
-<% @users.each do |user| %>
-  <%= link_to user.first_name, user_path(:id => user.id) %>
-  <img id="profilepic" src="<%= user.profile_picture_url %>">
-  <ul>
-    <li><%= user.first_name %> <%= user.last_name %></li>
+<%= render 'welcomeandnav' %>
 
-  </ul>
+<div id="wholepage" class="container">
+<% @users.each do |user| %>
+    <div id="linkprofilename">
+      <img id="profilepic" src="<%= user.profile_picture_url %>">
+      <ul id="nameandlink" class="text-center">
+        <li><div id="name"><%= user.first_name %> </div></li>
+        <li><%= link_to "Explore", user_path(:id => user.id), :class => "explorelink" %></li>
+      </ul>
+    </div>
 <% end %>
+</div>
 

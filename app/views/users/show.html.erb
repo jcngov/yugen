@@ -1,6 +1,9 @@
+<%= render 'welcomeandnav' %>
 
-<h1><%= @user.first_name %></h1>
-<%= @user.last_name %>
-<% @user.posts.each do |post| %>
-  <%= post.title %>
-<% end %>
+<div id= "showpagecontainer">
+  <img id="profilepiconshow" class="center-block" src="<%= @user.profile_picture_url %>">
+  <h1 class="text-center"><%= @user.first_name %> <%= @user.last_name %></h1>
+  <% @user.posts.each do |post| %>
+    <p><%= post.title %></p>
+  <% end %>
+</div>
