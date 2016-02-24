@@ -7,4 +7,7 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def location_search
+  end
 end

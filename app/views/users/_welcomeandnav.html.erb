@@ -1,11 +1,10 @@
+
 <div class="container-fluid" id="welcomeandlogout">
   <div class="row">
-    <div class="col-md-8" id="welcomename">
+    <div class="col-md-12" id="welcomename">
       <% if current_user %>
         Welcome, <%= current_user.first_name %>
-    </div>
-    <div class="col-md-offset-11">
-        <%= link_to 'Log Out', session_path('backtostart'), method: :delete %>
+        <%= link_to 'Log Out', session_path('backtostart'), :class => "logout", method: :delete %>
     </div>
   </div>
 </div>
@@ -18,13 +17,7 @@
       <li id="navbuttons"><a href="/posts">My Adventures</a></li>
       <li id="navbuttons"><a href="/users">Travelers</a></li>
       <li id="navbuttons"><a href="/users/:id/edit">My Profile</a></li>
-      <li class="dropdown" id="navbuttons">
-        <a href="" class="dropdown-toggle" data-toggle="dropdown">Locations<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="">First</a></li>
-            <li><a href="">Second</a></li>
-          </ul>
-      </li>
+      <li id="navbuttons"><a href="/search">Locations</a></li>
       <li id="navbuttons"><a href="">About Us</a></li>
     </ul>
   </div>

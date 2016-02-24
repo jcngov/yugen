@@ -2,7 +2,10 @@ class CreatePosts < ActiveRecord::Migration
   def change
     create_table :posts do |t|
       t.string :title
-      t.string :location
+      t.string :continent
+      t.string :country
+      t.string :region
+      t.string :city
       t.date :traveled_on
       t.text :description
       t.text :pros

@@ -3,7 +3,26 @@
 <div id= "showpagecontainer">
   <img id="profilepiconshow" class="center-block" src="<%= @user.profile_picture_url %>">
   <h1 class="text-center"><%= @user.first_name %> <%= @user.last_name %></h1>
+
+<div id="posts">
   <% @user.posts.each do |post| %>
-    <p><%= post.title %></p>
+<div class="container" id="eachpost">
+  <div id="titleandlocation">
+  <ul id="titleandlocationlist">
+    <li> <%= post.title %></li>
+    <li>Traveled to: <%= post.continent %> on <%= post.traveled_on %></li>
+  </ul>
+  </div>
+  <div id="space"></div>
+  <div id="links">
+    <ul id="linklist">
+    <% if current_user == @user %>
+      <li class="link"><%= link_to "Edit", edit_post_path(post) %></li> |
+      <li class="link"><%= link_to "Delete", post, method: :delete, data: {confirm: "Are you sure?"} %></li>
+    <% end %>
+    <li class="link"><%= link_to "View", post %></li>
+    </ul>
+  </div>
   <% end %>
+</div>
 </div>

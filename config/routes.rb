@@ -6,11 +6,14 @@ Rails.application.routes.draw do
 
   get '/about' => "pages#about"
 
+  get '/search' => "pages#location_search"
+
   get '/home' => "pages#home"
 
 # nested route: to make sure creating routes that have all nescessary data structured
 
   resources :users
+
 
   resources :posts do
     resources :images, shallow: true, except: [:index]

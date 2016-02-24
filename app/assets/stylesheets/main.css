@@ -114,14 +114,16 @@ form {
 }
 /*My Adventures Page*/
 
+#posts {
+  display: flex;
+  flex-wrap: wrap;
+}
 #eachpost {
   border: 2px solid;
-  position: relative;
-  top: 100px;
-  padding-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 80px;
+  top: 80px;
+  padding: 10px 0 0 0;
+  margin: 0 auto;
 }
 
 #space {
@@ -130,11 +132,14 @@ form {
 
 #titleandlocationlist {
   list-style: none;
-  padding-left: 0;
+  padding-left: 20px;
 }
 
 #linklist {
-  padding-left: 0;
+  padding-left: 800px;
+  padding-bottom: 40px;
+  position: relative;
+  bottom: 10px;
 }
 
 .link {

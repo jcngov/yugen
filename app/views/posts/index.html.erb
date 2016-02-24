@@ -4,12 +4,13 @@
   <h1 class="text-center">My Adventures</h1>
   <img class= "center-block" id="profilepiconshow" src="<%= current_user.profile_picture_url %>">
 </div>
+<div id="posts">
+  <% @posts.each do |post| %>
 <div class="container" id="eachpost">
   <div id="titleandlocation">
   <ul id="titleandlocationlist">
-  <% @posts.each do |post| %>
     <li> <%= post.title %></li>
-    <li>Traveled to: <%= post.location %> on <%= post.traveled_on %></li>
+    <li>Traveled to: <%= post.continent %> on <%= post.traveled_on %></li>
   </ul>
   </div>
   <div id="space"></div>
@@ -21,5 +22,6 @@
     </ul>
   </div>
   <% end %>
+</div>
 </div>
 
