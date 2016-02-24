@@ -2,10 +2,6 @@
 <ul>
 
   <li>Title: <%= @post.title %></li>
-  <li>Continent: <%= @post.continent %> </li>
-  <li>Country: <%= @post.country %> </li>
-  <li>Region: <%= @post.region %> </li>
-  <li>City: <%= @post.city %> </li>
   <li>Date Traveled: <%= @post.traveled_on %> </li>
   <li>Description: <%= @post.description %> </li>
   <li>Pros: <%= @post.pros %> </li>
@@ -19,21 +15,20 @@
   <%= link_to "Back", users_path %>
   <%= link_to "Home", home_path %>
 
+<%= form_for [@post, @image], html: { multipart: true } do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :postpicture %>
+  <%= f.file_field :postpicture %>
+  <%= f.submit "Upload" %>
+<% end %>
 
-  <%= form_for [@post, @image], html: { multipart: true } do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <br>
-    <%= f.label :postpicture %>
-    <%= f.file_field :postpicture %>
-    <%= f.submit "Upload" %>
-  <% end %>
 
 
 <% @post.images.each do |img| %>
   <h3><%= img.title %></h3>
   <img src="<%= img.postpicture %>">
-  <%= link_to "Delete", post_path, method: :delete, data: {confirm: "Are you sure?"} %>
 <% end %>
 
 

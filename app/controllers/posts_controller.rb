@@ -45,7 +45,7 @@ class PostsController < ApplicationController
 
 private
   def post_params
-    params.require(:post).permit(:title, :continent, :country, :region, :city, :traveled_on, :description, :pros, :cons, :tips_and_tricks)
+    params.require(:post).permit(:title, :traveled_on, :description, :pros, :cons, :tips_and_tricks)
   end
 end
 
