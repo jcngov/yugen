@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = current_user.posts
+    # @posts = Post.all
   end
 
   def new
@@ -9,7 +10,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.user_id = current_user
+    @post.user = current_user
     if @post.save
       redirect_to @post
     else
