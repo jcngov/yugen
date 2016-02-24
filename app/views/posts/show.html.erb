@@ -33,6 +33,7 @@
 <% @post.images.each do |img| %>
   <h3><%= img.title %></h3>
   <img src="<%= img.postpicture %>">
+  <%= link_to "Delete", post_path, method: :delete, data: {confirm: "Are you sure?"} %>
 <% end %>
 
 

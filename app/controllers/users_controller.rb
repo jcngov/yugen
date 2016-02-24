@@ -40,7 +40,7 @@ end
 private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :sex, :born_on, :email, :profile_picture_url, :profilepicture, :password, :password_confirmation)
+    params.require(:user).permit(:first_name, :last_name, :sex, :born_on, :email, :profilepicture, :password, :password_confirmation)
   end
 
 end
