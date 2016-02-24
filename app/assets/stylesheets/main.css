@@ -153,19 +153,20 @@ form {
 /*Users Page*/
 
 #profilepic {
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
+  padding: 10px;
 }
 
 #linkprofilename {
-  width: 250px;
+  width: 223.2px;
   height: 250px;
-
+  border: 2px solid;
+  margin-right: 10px;
 }
 
 #wholepage {
-  height: 600px;
-  width: 800px;
+
   display: flex;
   flex-wrap: wrap;
   position: relative;
