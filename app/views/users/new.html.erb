@@ -3,7 +3,7 @@
   <h1 class="text-center"> Sign Up </h1>
 
   <div class="col-md-4 col-md-offset-4">
-    <%= form_for @user do |f| %>
+    <%= form_for @user, html: { multipart: true } do |f| %>
       <div class="form-group">
         <%= f.label :first_name, "First Name" %>
         <input class="form-control" placeholder="First Name"<%= f.text_field :first_name %>
@@ -23,9 +23,9 @@
         <%= f.label :born_on, 'Birthday' %>
         <input class="form-control" placeholder="Birthday"<%= f.text_field :born_on %>
       </div>
-      <div class="form-group">
-        <%= f.label :profile_picture_url %>
-        <input class="form-control" placeholder="Profile Picture"<%= f.text_field :profile_picture_url %>
+      <div>
+        <%= f.label :profilepicture %>
+        <%= f.file_field :profilepicture %>
       </div>
       <div class="form-group">
         <%= f.label :email %>

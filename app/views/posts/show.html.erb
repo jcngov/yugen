@@ -19,19 +19,20 @@
   <%= link_to "Back", users_path %>
   <%= link_to "Home", home_path %>
 
-<% if current_user == @user %>
-  <%= form_for [@post, @image] do |f| %>
+
+  <%= form_for [@post, @image], html: { multipart: true } do |f| %>
     <%= f.label :title %>
     <%= f.text_field :title %>
-    <%= f.label :image_url %>
-    <%= f.text_field :image_url %>
-    <%= f.submit "Create Image" %>
+    <br>
+    <%= f.label :postpicture %>
+    <%= f.file_field :postpicture %>
+    <%= f.submit "Upload" %>
   <% end %>
-<% end %>
+
 
 <% @post.images.each do |img| %>
   <h3><%= img.title %></h3>
-  <img src="<%= img.image_url %>">
+  <img src="<%= img.postpicture %>">
 <% end %>
 
 

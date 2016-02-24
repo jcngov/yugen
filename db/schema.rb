@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160222204158) do
+ActiveRecord::Schema.define(version: 20160224175538) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,12 @@ ActiveRecord::Schema.define(version: 20160222204158) do
     t.string   "title"
     t.string   "image_url"
     t.integer  "post_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "postpicture_file_name"
+    t.string   "postpicture_content_type"
+    t.integer  "postpicture_file_size"
+    t.datetime "postpicture_updated_at"
   end
 
   add_index "images", ["post_id"], name: "index_images_on_post_id", using: :btree
@@ -53,8 +57,12 @@ ActiveRecord::Schema.define(version: 20160222204158) do
     t.date     "born_on"
     t.string   "profile_picture_url"
     t.string   "password_digest"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "profilepicture_file_name"
+    t.string   "profilepicture_content_type"
+    t.integer  "profilepicture_file_size"
+    t.datetime "profilepicture_updated_at"
   end
 
   add_foreign_key "images", "posts"
