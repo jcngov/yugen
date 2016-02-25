@@ -1,11 +1,12 @@
-/*/*Enter Page*/
+/*Enter Page*/
 
 #enter {
   background-color: #d9d9d9;
 }
+
 #yugen {
   font-size: 200px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   position: relative;
   bottom: 600px;
 }
@@ -54,7 +55,7 @@ form {
 }
 
 #emailtext, #passwordtext {
-  color:black;
+  color: black;
 }
 
 #welcomebox {
@@ -94,13 +95,14 @@ form {
 }
 
 #createlink, #explorelink {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 100px;
   color: white;
   position: relative;
   top: 170px;
   opacity: 0.8;
 }
+
 #create {
   background-image: url("https://i.imgur.com/kA0zLKX.jpg");
 }
@@ -112,12 +114,14 @@ form {
 .logout {
   float: right;
 }
+
 /*My Adventures Page*/
 
 #posts {
   display: flex;
   flex-wrap: wrap;
 }
+
 #eachpost {
   border: 2px solid;
   height: 80px;
@@ -147,9 +151,6 @@ form {
   list-style: none;
 }
 
-#myadventurescontainer {
-
-}
 /*Users Page*/
 
 #profilepic {
@@ -166,7 +167,6 @@ form {
 }
 
 #wholepage {
-
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -280,6 +280,7 @@ form {
 #probox {
   border: 2px solid;
 }
+
 #locations, .pnc {
   padding-left: 20px;
 }
@@ -287,6 +288,7 @@ form {
 #middleheaders {
   margin-top: 10
 }
+
 /*New Post Page*/
 
 #description {
@@ -297,4 +299,3 @@ form {
   position: relative;
   top: 50px;
 }
-*/
