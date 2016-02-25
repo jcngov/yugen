@@ -1,9 +1,10 @@
 <%= render 'welcomeandnav' %>
 
+<div id="wholelocationcontainer">
 <div id="locationcontainer">
-  <h1 class="text-center"> Locations </h1>
+  <h1 class="text-center" id="locationtext"> Locations </h1>
   <% @locations.each do |loc| %>
-    <p id="locsearch" class="text-center"><%= link_to loc, location_path(loc) %></p>
+    <p id="locsearch" class="text-center"><%= link_to loc, location_path(loc), id: "loctext" %></p>
   <% end %>
 </div>
-
+</div>

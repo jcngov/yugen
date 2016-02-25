@@ -1,3 +1,5 @@
+<%= render 'welcomeandnav' %>
+
 <ul>
   <% @location.posts.each do |post| %>
     <li>
@@ -5,3 +7,7 @@
     </li>
   <% end %>
 </ul>
+
+<% @location.posts.each do |post| %>
+  <img src="<%= post.user.profilepicture %>">
+<% end %>
