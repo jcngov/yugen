@@ -1,30 +1,36 @@
-<div class="container">
+ <%= render 'welcomeandnav' %>
+  <h1 class="text-center"> Edit Profile </h1>
+
   <div class="col-md-4 col-md-offset-4">
-    <%= form_for @user do |f| %>
+    <%= form_for @user, html: { multipart: true } do |f| %>
       <div class="form-group">
         <%= f.label :first_name, "First Name" %>
-        <input class="form-control" placeholder="First Name"<%= f.text_field :first_name %>
+        <%= f.text_field :first_name, class: "form-control" %>
       </div>
       <div class="form-group">
         <%= f.label :last_name, "Last Name" %>
-        <input class="form-control" placeholder="Last Name"<%= f.text_field :last_name %>
+        <%= f.text_field :last_name, class: "form-control" %>
       </div>
       <div class="form-group">
         <%= f.label :sex, 'I am' %>
-        <select class="text" placeholder="Select Sex"<%= f.text_field :sex %>
-          <option>Male</option>
-          <option>Female</option>
-        </select>
+          <select class="text" placeholder="Select Sex"<%= f.text_field :sex %>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
       </div>
       <div class="form-group">
         <%= f.label :born_on, 'Birthday' %>
-        <input class="form-control" placeholder="Birthday"<%= f.text_field :born_on %>
+       <%= f.text_field :born_on, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :profilepicture, "Profile Picture" %>
+        <%= f.file_field :profilepicture %>
       </div>
       <div class="form-group">
         <%= f.label :email %>
-        <input class="form-control" placeholder="Email"<%= f.text_field :email %>
+        <%= f.text_field :email, class: "form-control" %>
       </div>
-      <div><%= f.submit "Update" %> </div>
+      <%= f.submit "Update" %>
       <%= link_to "Home", home_path %>
     <% end %>
   </div>

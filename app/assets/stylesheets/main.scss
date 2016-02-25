@@ -1,4 +1,4 @@
-/*Enter Page*/
+// Enter Page
 
 #enter {
   background-color: #d9d9d9;
@@ -16,7 +16,7 @@
   bottom: 300px;
 }
 
-/*Sign-Up Page*/
+// Sign-Up Page
 
 #signup {
   margin: 0 15px 0 15px;
@@ -42,7 +42,7 @@ form {
 }
 
 
-/*Log-in Page*/
+// Log-in Page
 
 
 #login-box {
@@ -64,7 +64,7 @@ form {
   bottom: 650px;
 }
 
-/*Home Page*/
+// Home Page
 
 #welcomeandlogout {
   position: relative;
@@ -73,34 +73,34 @@ form {
 
 
 #navbar{
-  top: 30px;
-  padding-left: 15px;
   margin-left: 0;
+  position: relative;
 }
 
 #navbuttons {
   padding-right: 40px;
 }
 
+#welcomename {
+  margin-bottom: 10px;
+}
 #createandexplorecontainer {
-  width: 1434px;
   height: 500px;
   position: relative;
-  top: 75px;
   display: flex;
   justify-content: space-around;
 }
 
 #create, #explore {
- width: 700px;
+ width: 550px;
 }
 
 #createlink, #explorelink {
   font-family: "Raleway", sans-serif;
-  font-size: 100px;
+  font-size: 80px;
   color: white;
   position: relative;
-  top: 170px;
+  top: 200px;
   opacity: 0.8;
 }
 
@@ -116,7 +116,7 @@ form {
   float: right;
 }
 
-/*My Adventures Page*/
+// My Adventures Page
 
 #posts {
   display: flex;
@@ -126,9 +126,8 @@ form {
 #eachpost {
   border: 2px solid;
   height: 80px;
-  top: 80px;
-  padding: 10px 0 0 0;
-  margin: 0 auto;
+  padding-top: 10px;
+  margin-top: 10px;
 }
 
 #space {
@@ -152,7 +151,7 @@ form {
   list-style: none;
 }
 
-/*Users Page*/
+// Users Page
 
 #profilepic {
   width: 220px;
@@ -163,7 +162,6 @@ form {
 #linkprofilename {
   width: 223.2px;
   height: 250px;
-  border: 2px solid;
   margin-right: 10px;
 }
 
@@ -171,7 +169,6 @@ form {
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  top: 100px;
 }
 
 #name {
@@ -189,13 +186,13 @@ form {
   display: flex;
   justify-content: center;
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 /* User's Index Post Page*/
 
 #showpagecontainer, #myadventurescontainer {
   position: relative;
-  top: 80px;
 }
 
 #profilepicinindex {
@@ -204,7 +201,7 @@ form {
   border-radius: 50%;
 }
 
-/*User's Show 1 Post Page*/
+// User's Show 1 Post Page
 
 #profilepiconshowuser {
   width: 200px;
@@ -298,5 +295,13 @@ form {
 
 #newpostcontainer {
   position: relative;
-  top: 50px;
+}
+
+#submit {
+  float: right;
+}
+// Location Page
+
+#locationcontainer {
+  border: 2px solid;
 }

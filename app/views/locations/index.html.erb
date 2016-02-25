@@ -1,5 +1,9 @@
-<% @locations.each do |loc| %>
+<%= render 'welcomeandnav' %>
 
-  <p><%= link_to loc, location_path(loc) %></p>
+<div id="locationcontainer">
+  <h1 class="text-center"> Locations </h1>
+  <% @locations.each do |loc| %>
+    <p id="locsearch" class="text-center"><%= link_to loc, location_path(loc) %></p>
+  <% end %>
+</div>
 
-<% end %>

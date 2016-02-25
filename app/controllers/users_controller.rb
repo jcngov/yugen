@@ -34,7 +34,6 @@ def update
   else
     render :edit
   end
-
 end
 
 private
