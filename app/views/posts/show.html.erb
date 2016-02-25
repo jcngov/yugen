@@ -1,68 +1,96 @@
-<h1>Show Page</h1>
 
-<ul>
 
-    <li>Title: <%= @post.title %></li>
-    <li>Date Traveled: <%= @post.traveled_on %></li>
-    <li>Description: <%= @post.description %> </li>
-    <li>Pros: <%= @post.pros %> </li>
-    <li>Cons: <%= @post.cons %> </li>
+<div id="profiletitledate">
+  <img id="profilepiconshowpost" src="<%=@post.user.profilepicture%>">
+  <div id="titleanddate">
+    <p><%= @post.title %></p>
+    <p>Date Traveled: <%= @post.traveled_on %></p>
+    <p><%= link_to "Back", posts_path %></p>
+  </div>
+</div>
 
-</ul>
-
-<h2>Locations</h2>
+<h2 id="locations">Locations:</h2>
 <ul>
   <% @post.locations.each do |loc| %>
     <li>
       <strong>Continent: </strong><%= loc.continent %>
+      &nbsp;&nbsp;|&nbsp;&nbsp;<strong>Country: </strong><%= loc.country %>
       &nbsp;&nbsp;|&nbsp;&nbsp;<strong>Region: </strong><%= loc.region %>
+      &nbsp;&nbsp;|&nbsp;&nbsp;<strong>City: </strong><%= loc.city %>
     </li>
   <% end %>
 </ul>
+
+<div id="locationform">
+  <%= form_for [@post, @location], html: { class: "form-inline" } do |f| %>
+    <div class="form-group">
+      <%= f.label :continent %>
+      <input class="form-control" placeholder="Continent"<%= f.text_field :continent %>
+    </div>
+    <div class="form-group">
+      <%= f.label :country %>
+      <input class="form-control" placeholder="Country"<%= f.text_field :country %>
+    </div>
+    <div class="form-group">
+      <%= f.label :region %>
+      <input class="form-control" placeholder="Region"<%= f.text_field :region %>
+    </div>
+    <div class="form-group">
+      <%= f.label :city %>
+      <input class="form-control" placeholder="City"<%= f.text_field :city %>
+    </div>
+    <%= f.submit "Submit" %>
+  <% end %>
+</div>
+
+
+  <%= form_for [@post, @image], html: { multipart: true, class: "form-inline" } do |f| %>
+    <div class="form-group">
+    <%= f.label :title %>
+    <input class="form-control" placeholder="Title"<%= f.text_field :title %>
+    </div>
+    <div class="form-group">
+    <%= f.label :postpicture, "Picture" %>
+    <input class="form-control" <%= f.file_field :postpicture %>
+    </div>
+    <%= f.submit "Upload" %>
+  <% end %>
+
+<div id="middlecontainer">
+  <div id="tripdetailsandproscons">
+    <div id="tripdetails">
+      <h2 id="middleheaders">Trip Details </h2> <p><%= @post.description %> </p>
+    </div>
+    <div id="probox">
+    <h2 id="middleheaders" class="pnc">Pros 'n' Cons </h2>
+      <ul id="prosandcons">
+        <li>Pros: <%= @post.pros %> </li>
+        <li>Cons: <%= @post.cons %> </li>
+      </ul>
+    </div>
+    <div id="tipstricks">
+      <h2 id="middleheaders">Tips 'n' Tricks</h2> <p><%= @post.tips_and_tricks %></p>
+    </div>
+  </div>
+  <div id="trippicscontainer">
+    <% @post.images.each do |img| %>
+      <div id="singlepictitle">
+      <img id="trippics" src ="<%= img.postpicture %>">
+      <p id="title"><%= img.title %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
 
 <% if current_user == @user %>
   <%= link_to "Edit", edit_post_path(@post) %>
   <%= link_to "Delete", @post, method: :delete, data: {confirm: "Are you sure?"} %>
 <% end %>
-  <%= link_to "Back", users_path %>
-  <%= link_to "Home", home_path %>
-
-<%= form_for [@post, @image], html: { multipart: true } do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <br>
-  <%= f.label :postpicture %>
-  <%= f.file_field :postpicture %>
-  <%= f.submit "Upload" %>
-<% end %>
-
-<h3> Add Location </h3>
-<%= form_for [@post, @location] do |f| %>
-  <div class="form-group">
-    <%= f.label :continent %>
-    <input class="form-control" placeholder="Title"<%= f.text_field :continent %>
-  </div>
-  <div class="form-group">
-    <%= f.label :country %>
-    <input class="form-control" placeholder="Title"<%= f.text_field :country %>
-  </div>
-  <div class="form-group">
-    <%= f.label :region %>
-    <input class="form-control" placeholder="Title"<%= f.text_field :region %>
-  </div>
-  <div class="form-group">
-    <%= f.label :city %>
-    <input class="form-control" placeholder="Title"<%= f.text_field :city %>
-  </div>
-  <%= f.submit "Submit" %>
-<% end %>
 
 
 
-<% @post.images.each do |img| %>
-  <h3><%= img.title %></h3>
-  <img src="<%= img.postpicture %>">
-<% end %>
+
 
 
 

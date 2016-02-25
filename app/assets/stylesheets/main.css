@@ -1,4 +1,4 @@
-/*Enter Page*/
+/*/*Enter Page*/
 
 #enter {
   background-color: #d9d9d9;
@@ -190,19 +190,101 @@ form {
   padding-left: 0;
 }
 
-/*Show User's Page*/
+/* User's Index Post Page*/
 
 #showpagecontainer, #myadventurescontainer {
   position: relative;
   top: 80px;
 }
 
-#profilepiconshow {
+#profilepicinindex {
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
 
+/*User's Show 1 Post Page*/
+
+#profilepiconshowuser {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+#profilepiconshowpost {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+#profiletitledate {
+  width: 1150px;
+  display: flex;
+  margin-top: 10px;
+}
+
+#titleanddate {
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+#locationform {
+  border: 2px solid;
+  display: flex;
+}
+
+#middlecontainer {
+  display: flex;
+}
+
+#tripdetailsandproscons {
+  width: 575px;
+}
+
+#trippicscontainer {
+  width: 575px;
+  display: flex;
+  border: 2px solid;
+  justify-content: space-around;
+}
+
+#singlepictitle {
+  height: 250px;
+}
+#trippics {
+  height: 250px;
+  width: 250px;
+  margin-top: 10px;
+}
+
+#title {
+  height: 20px;
+  position: relative;
+  bottom: 0 20px 0 20px;
+  text-align: center;
+}
+
+#tripdetails, #tipstricks {
+  padding: 0 20px 0 20px;
+  border: 2px solid;
+}
+
+#prosandcons {
+  list-style: none;
+  padding: 0 20px 0 20px;
+}
+
+#probox {
+  border: 2px solid;
+}
+#locations, .pnc {
+  padding-left: 20px;
+}
+
+#middleheaders {
+  margin-top: 10
+}
 /*New Post Page*/
 
 #description {
@@ -213,3 +295,4 @@ form {
   position: relative;
   top: 50px;
 }
+*/
