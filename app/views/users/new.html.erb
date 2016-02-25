@@ -6,40 +6,40 @@
     <%= form_for @user, html: { multipart: true } do |f| %>
       <div class="form-group">
         <%= f.label :first_name, "First Name" %>
-        <input class="form-control" placeholder="First Name"<%= f.text_field :first_name %>
+        <%= f.text_field :first_name, class: "form-control" %>
       </div>
       <div class="form-group">
         <%= f.label :last_name, "Last Name" %>
-        <input class="form-control" placeholder="Last Name"<%= f.text_field :last_name %>
+        <%= f.text_field :last_name, class: "form-control" %>
       </div>
       <div class="form-group">
         <%= f.label :sex, 'I am' %>
-        <select class="text" placeholder="Select Sex"<%= f.text_field :sex %>
-          <option>Male</option>
-          <option>Female</option>
-        </select>
+          <select class="text" placeholder="Select Sex"<%= f.text_field :sex %>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
       </div>
       <div class="form-group">
         <%= f.label :born_on, 'Birthday' %>
-        <input class="form-control" placeholder="Birthday"<%= f.text_field :born_on %>
+       <%= f.text_field :born_on, class: "form-control" %>
       </div>
-      <div>
-        <%= f.label :profilepicture %>
+      <div class="form-group">
+        <%= f.label :profilepicture, "Profile Picture" %>
         <%= f.file_field :profilepicture %>
       </div>
       <div class="form-group">
         <%= f.label :email %>
-        <input class="form-control" placeholder="Email"<%= f.text_field :email %>
+        <%= f.text_field :email, class: "form-control" %>
       </div>
       <div class="form-group">
         <%= f.label :password %>
-        <input class="form-control" placeholder="Password"<%= f.password_field :password %>
+        <%= f.password_field :password , class: "form-control" %>
       </div>
       <div class="form-group">
         <%= f.label :password_confirmation, "Password Confirmation" %>
-        <input class="form-control" placeholder="Please Enter Password Again" <%= f.password_field :password_confirmation %>
+        <%= f.password_field :password_confirmation, class: "form-control" %>
       </div>
-    <%= f.submit "Submit" %>
+    <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
   </div>
 </div>
 <% end %>

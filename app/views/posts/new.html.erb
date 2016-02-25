@@ -1,36 +1,5 @@
 
 <%= render 'welcomeandnav' %>
-
-<div id="newpostcontainer">
-  <h1 class="text-center"> Create New Post </h1>
-    <%= form_for [@post] do |f| %>
-      <div class="form-group">
-        <%= f.label :title %>
-        <input class="form-control" placeholder="Title"<%= f.text_field :title %>
-      </div>
-      <div class="form-group">
-        <%= f.label :traveled_on %>
-        <input class="form-group" placeholder="e.g. 1/2/13"<%= f.text_field :traveled_on %>
-      </div>
-      <div class="form-group">
-        <%= f.label :description, "Trip Details" %>
-        <input class="form-control" id="description" <%= f.text_field :description %>
-      </div>
-      <div class="form-group">
-        <%= f.label :pros %>
-        <input class="form-control" <%= f.text_field :pros %>
-      </div>
-      <div class="form-group">
-        <%= f.label :cons %>
-        <input class="form-control" <%= f.text_field :cons %>
-      </div>
-      <div class="form-group">
-        <%= f.label :tips_and_tricks %>
-        <input class="form-control" <%= f.text_field :tips_and_tricks %>
-      </div>
-    <%= f.submit "Submit" %>
-</div>
-<% end %>
-
-
+<h1 class="text-center"> Create New Post </h1>
+<%= render 'form' %>
 

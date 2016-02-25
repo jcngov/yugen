@@ -7,13 +7,13 @@
     <%= form_tag sessions_path do %>
       <div class="form-group" id="email">
         <%= label_tag :email, "Email" %>
-        <input class="form-control" placeholder="Email" id="emailtext"<%= text_field_tag :email, params[:email] %>
+        <%= text_field_tag :email, params[:email], class: "form-control", id: "emailtext" %>
       </div>
       <div class="form-group" id="password">
         <%= label_tag :password, "Password" %>
-        <input class="form-control" placeholder="password" id="passwordtext"<%= password_field_tag :password %>
+        <%= password_field_tag :password, nil, class: "form-control", id: "passwordtext" %>
       </div>
-    <%= submit_tag "Log In" %>
+    <%= submit_tag "Log In", class: "btn btn-default btn-primary" %>
   </div>
 </div>
 </div>
