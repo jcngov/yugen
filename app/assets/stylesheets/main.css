@@ -247,6 +247,7 @@ form {
   display: flex;
   border: 2px solid;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 #singlepictitle {
@@ -263,6 +264,7 @@ form {
   position: relative;
   bottom: 0 20px 0 20px;
   text-align: center;
+  margin: 0;
 }
 
 #tripdetails, #tipstricks {
