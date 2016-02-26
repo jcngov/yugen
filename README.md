@@ -48,7 +48,7 @@ Yūgen derives from Japan meaning an awareness of the universe that triggers emo
 - 2. Make a new account
 - 3. Begin creating posts or viewing other users' posts
 
-##Cloning My Repo
+##Fork My Repo
 - 1. Fork the git repository found at: https://github.com/jcngov/yugen
 - Follow these steps to clone in order to use open source code:
     - https://help.github.com/articles/cloning-a-repository
