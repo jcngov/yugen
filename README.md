@@ -1,5 +1,5 @@
-## Yūgen
-
+## yūgen
+![](https://i.imgur.com/ipuTEL7.png)
 
 ##Intro
 
@@ -7,4 +7,50 @@ Yūgen derives from Japan meaning an awareness of the universe that triggers emo
 
 ***
 
-https://trello.com/jerryngov
+##Technologies Used
+
+- Ruby 2.2.3
+- Ruby on Rails 4.2.5.1
+- Bootstrap
+- HTML
+- CSS
+- Paperclip Gem
+- Heroku
+- https://trello.com/jerryngov
+
+##Running Ruby on Rails App with Heroku
+- https://devcenter.heroku.com/articles/rails4
+
+##Paperclip Prerequisites & Steps
+- [AWS S3 Account to store images in the cloud](https://devcenter.heroku.com/articles/s3#s3-setup)
+- [Heroku Toolbelt to create and deploy web app to Heroku](https://toolbelt.heroku.com/)
+- [ImageMagick to resize](http://www.imagemagick.org/script/index.php)
+- [Uploading Steps](https://devcenter.heroku.com/articles/paperclip-s3#configuration)
+
+##Main Features
+- Login:
+![](https://i.imgur.com/JgCnKXX.png)
+- Create and See Posts:
+![](https://i.imgur.com/4iOKYVA.png)
+- Add Locations and Pictures:
+![](https://i.imgur.com/ugoy6ln.png)
+- See Other User Posts and Locations
+![](https://i.imgur.com/RqhHEih.png)
+![](https://i.imgur.com/2ammPxq.png)
+
+##Quick Start
+- 1. https://agile-harbor-41384.herokuapp.com/
+- 2. Make a new account
+- 3. Begin creating posts or viewing other users' posts
+
+##Future Plans
+- Allows users to comment on eachothers' posts.
+- Allow users to follow other users.
+- More effective location search field.
+
+##Cloning My Repo
+- https://help.github.com/articles/cloning-a-repository
+
+##More Resources
+- [Rails Guides](http://guides.rubyonrails.org/)
+- [Api Rails](http://api.rubyonrails.org/)
