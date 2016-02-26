@@ -12,13 +12,6 @@
         <%= f.text_field :last_name, class: "form-control" %>
       </div>
       <div class="form-group">
-        <%= f.label :sex, 'I am' %>
-          <select class="text" placeholder="Select Sex"<%= f.text_field :sex %>
-            <option>Male</option>
-            <option>Female</option>
-          </select>
-      </div>
-      <div class="form-group">
         <%= f.label :born_on, 'Birthday' %>
        <%= f.text_field :born_on, class: "form-control" %>
       </div>
@@ -30,8 +23,7 @@
         <%= f.label :email %>
         <%= f.text_field :email, class: "form-control" %>
       </div>
-      <%= f.submit "Update" %>
-      <%= link_to "Home", home_path %>
+      <div class="actions"><%= f.submit "Update", class:"btn btn-default btn-primary"%></div>
     <% end %>
   </div>
 </div>

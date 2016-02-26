@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     resources :locations, only: [:new, :create]
   end
 
-  resources :locations, only: [:index, :show]
+  resources :locations, only: [:index, :show, :destroy]
 
   resources :sessions, only: [:index, :new, :create, :destroy]
 

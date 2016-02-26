@@ -134,27 +134,26 @@ form {
 #posts {
   display: flex;
   flex-wrap: wrap;
+  border: 2px solid;
+  height: 800px;
 }
 
 #eachpost {
   border: 2px solid;
   height: 80px;
-  padding-top: 10px;
-  margin-top: 10px;
+  padding: 0;
+  margin-top: 30px;
 }
 
-#space {
-  width: 400px;
-}
 
 #titleandlocationlist {
   list-style: none;
   padding-left: 20px;
+  padding-top: 10px;
 }
 
 #linklist {
   padding-left: 800px;
-  padding-bottom: 40px;
   position: relative;
   bottom: 10px;
 }
@@ -208,6 +207,10 @@ form {
   position: relative;
 }
 
+#myadventurescontainer {
+  background-color: lightgray;
+}
+
 #profilepicinindex {
   width: 200px;
   height: 200px;
@@ -233,6 +236,7 @@ form {
   width: 1150px;
   display: flex;
   margin-top: 10px;
+  background-color: lightgray;
 }
 
 #titleanddate {
@@ -251,6 +255,7 @@ form {
 
 #tripdetailsandproscons {
   width: 575px;
+  border-right: 2px solid;
 }
 
 #trippicscontainer {
@@ -280,7 +285,6 @@ form {
 
 #tripdetails, #tipstricks {
   padding: 0 20px 0 20px;
-  border: 2px solid;
   margin-left: 30px;
   overflow: scroll;
   height: 250px;
@@ -294,11 +298,11 @@ form {
   list-style: none;
   padding: 0 20px 0 20px;
   margin-left: 30px;
+  height: 100px;
   overflow: scroll;
 }
 
 #probox {
-  border: 2px solid;
   margin-left: 30px;
   overflow: scroll;
 }
@@ -313,8 +317,16 @@ form {
 
 #locationlist {
   height: 100px;
-  width: 600px;
+  width: 800px;
   overflow: scroll;
+}
+
+#imgtitle {
+  border: 2px solid;
+}
+
+#deletepic {
+  margin-bottom: 3px;
 }
 
 /*New Post Page*/
@@ -362,4 +374,10 @@ form {
 
 #aboutyugen {
   padding: 0 150px 0 150px;
+}
+
+#locationprofilepic {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
 }

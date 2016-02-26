@@ -19,6 +19,12 @@ class LocationsController < ApplicationController
     redirect_to post_path(params[:post_id])
   end
 
+  def destroy
+    @location = Location.find(params[:id])
+    @location.destroy
+    redirect_to posts_path
+  end
+
 private
   def location_params
     params.require(:location).permit(:continent, :country, :region, :city, :long, :lat)
