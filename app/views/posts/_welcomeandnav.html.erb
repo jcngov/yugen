@@ -13,13 +13,13 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
   <div class="container" id="navbar">
     <ul class="nav navbar-nav">
-      <li id="navbuttons"><a href="/home">Home</a></li>
-      <li id="navbuttons"><a href="/posts">My Adventures</a></li>
-      <li id="navbuttons"><a href="/posts/new">Create</a></li>
-      <li id="navbuttons"><a href="/users">Travelers</a></li>
-      <li id="navbuttons"><a href="/users/:id/edit">My Profile</a></li>
-      <li id="navbuttons"><a href="/locations">Locations</a></li>
-      <li id="navbuttons"><a href="">About Us</a></li>
+      <li id="navbuttons"><%= link_to "Home", home_path %></li>
+      <li id="navbuttons"><%= link_to "My Adventures", posts_path %></li>
+      <li id="navbuttons"><%= link_to "Create", new_post_path %></li>
+      <li id="navbuttons"><%= link_to "Travelers", users_path %></li>
+      <li id="navbuttons"><%= link_to "My Profile", edit_user_path(current_user.id) %></li>
+      <li id="navbuttons"><%= link_to "Locations", locations_path %></li>
+      <li id="navbuttons"><%= link_to "About", about_path %></li>
     </ul>
   </div>
 </nav>

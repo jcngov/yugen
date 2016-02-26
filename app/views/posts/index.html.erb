@@ -14,13 +14,11 @@
   </ul>
   </div>
   <div id="space"></div>
-  <div id="links">
     <ul id="linklist">
       <li class="link"><%= link_to "View", post %></li> |
       <li class="link"><%= link_to "Edit", edit_post_path(post) %></li> |
       <li class="link"><%= link_to "Delete", post, method: :delete, data: {confirm: "Are you sure?"} %></li>
     </ul>
-  </div>
   <% end %>
 </div>
 </div>

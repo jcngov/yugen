@@ -4,6 +4,14 @@
   background-color: #d9d9d9;
 }
 
+#yugenpic{
+  width: 1100px;
+}
+
+#loginpic {
+  width: 1100px;
+}
+
 #yugen {
   font-size: 200px;
   font-family: "Raleway", sans-serif;
@@ -39,9 +47,14 @@ form {
   bottom: 900px;
   background-color: white;
   opacity: 0.8;
+  background-image: url('https://i.imgur.com/cH6nP6P.jpg');
 }
 
-
+#errors {
+  position: relative;
+  bottom: 850px;
+  color: white;
+}
 // Log-in Page
 
 
@@ -245,6 +258,8 @@ form {
   display: flex;
   flex-wrap: wrap;
   margin-left: 35px;
+  overflow: scroll;
+  height: 650px;
 }
 
 #singlepictitle {
@@ -267,17 +282,25 @@ form {
   padding: 0 20px 0 20px;
   border: 2px solid;
   margin-left: 30px;
+  overflow: scroll;
+  height: 250px;
+}
+
+#tipstricks {
+  height: 160px;
 }
 
 #prosandcons {
   list-style: none;
   padding: 0 20px 0 20px;
   margin-left: 30px;
+  overflow: scroll;
 }
 
 #probox {
   border: 2px solid;
   margin-left: 30px;
+  overflow: scroll;
 }
 
 #locations, .pnc {
@@ -286,6 +309,12 @@ form {
 
 #middleheaders {
   margin-top: 10
+}
+
+#locationlist {
+  height: 100px;
+  width: 600px;
+  overflow: scroll;
 }
 
 /*New Post Page*/
@@ -312,6 +341,7 @@ form {
   padding-top: 40px;
   height: 600px;
   width: 550px;
+  border: 2px solid;
   opacity: 0.8;
   overflow: scroll;
 }
@@ -326,3 +356,10 @@ form {
   color: white;
 }
 
+#locationtitlelink{
+  text-decoration: none;
+}
+
+#aboutyugen {
+  padding: 0 150px 0 150px;
+}

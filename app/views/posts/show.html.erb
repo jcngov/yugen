@@ -10,16 +10,18 @@
 </div>
 
 <h2 id="locations">Locations:</h2>
-<ul>
-  <% @post.locations.each do |loc| %>
-    <li>
-      <strong>Continent: </strong><%= loc.continent %>
-      &nbsp;&nbsp;|&nbsp;&nbsp;<strong>Country: </strong><%= loc.country %>
-      &nbsp;&nbsp;|&nbsp;&nbsp;<strong>Region: </strong><%= loc.region %>
-      &nbsp;&nbsp;|&nbsp;&nbsp;<strong>City: </strong><%= loc.city %>
-    </li>
-  <% end %>
-</ul>
+<div id="locationlist">
+  <ul>
+    <% @post.locations.each do |loc| %>
+      <li>
+        <strong>Continent: </strong><%= loc.continent %>
+        &nbsp;&nbsp;|&nbsp;&nbsp;<strong>Country: </strong><%= loc.country %>
+        &nbsp;&nbsp;|&nbsp;&nbsp;<strong>Region: </strong><%= loc.region %>
+        &nbsp;&nbsp;|&nbsp;&nbsp;<strong>City: </strong><%= loc.city %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
 <% if current_user == @post.user %>
   <div id="locationform">
