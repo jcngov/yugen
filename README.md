@@ -14,12 +14,44 @@ Yūgen derives from Japan meaning an awareness of the universe that triggers emo
 - Bootstrap
 - HTML
 - CSS
-- Paperclip Gem
+- Gems added:
+    - dotenv-rails 
+    - bcrypt 
+    - paperclip
+    - aws-sdk
+    - pry-rails
 - Heroku
 - https://trello.com/jerryngov
 
-##Running Ruby on Rails App with Heroku
-- https://devcenter.heroku.com/articles/rails4
+##Design & ERD
+- Wireframe:
+![](https://i.imgur.com/21LUaIY.png)
+
+- ERD:
+***
+![](https://i.imgur.com/VaBjipi.png)
+![](https://i.imgur.com/Iaj4vat.png)
+
+##Main Features
+- **User Signup and Login:**
+    ![](https://i.imgur.com/JgCnKXX.png)
+- **Create and See Posts:**
+    ![](https://i.imgur.com/4iOKYVA.png)
+- **Add Locations and Pictures:**
+    ![](https://i.imgur.com/ugoy6ln.png)
+- **See Other User Posts and Locations**
+    ![](https://i.imgur.com/RqhHEih.png)
+    ![](https://i.imgur.com/2ammPxq.png)
+
+##Quick Start
+- 1. https://agile-harbor-41384.herokuapp.com/
+- 2. Make a new account
+- 3. Begin creating posts or viewing other users' posts
+
+##Cloning My Repo
+- 1. Fork the git repository found at: https://github.com/jcngov/yugen
+- Follow these steps to clone in order to use open source code:
+    - https://help.github.com/articles/cloning-a-repository
 
 ##Paperclip Prerequisites & Steps
 - [AWS S3 Account to store images in the cloud](https://devcenter.heroku.com/articles/s3#s3-setup)
@@ -27,29 +59,14 @@ Yūgen derives from Japan meaning an awareness of the universe that triggers emo
 - [ImageMagick to resize](http://www.imagemagick.org/script/index.php)
 - [Uploading Steps](https://devcenter.heroku.com/articles/paperclip-s3#configuration)
 
-##Main Features
-- Login:
-![](https://i.imgur.com/JgCnKXX.png)
-- Create and See Posts:
-![](https://i.imgur.com/4iOKYVA.png)
-- Add Locations and Pictures:
-![](https://i.imgur.com/ugoy6ln.png)
-- See Other User Posts and Locations
-![](https://i.imgur.com/RqhHEih.png)
-![](https://i.imgur.com/2ammPxq.png)
-
-##Quick Start
-- 1. https://agile-harbor-41384.herokuapp.com/
-- 2. Make a new account
-- 3. Begin creating posts or viewing other users' posts
+##Running Ruby on Rails App with Heroku
+- https://devcenter.heroku.com/articles/rails4
 
 ##Future Plans
-- Allows users to comment on eachothers' posts.
+- Allows users to comment on each other's posts.
 - Allow users to follow other users.
 - More effective location search field.
 
-##Cloning My Repo
-- https://help.github.com/articles/cloning-a-repository
 
 ##More Resources
 - [Rails Guides](http://guides.rubyonrails.org/)
